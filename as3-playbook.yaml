@@ -7,11 +7,11 @@
   vars:
 
   vars_files:
-   - ../credentials/bigip_credentials.yaml
+    - ../credentials/bigip_credentials.yaml
 
   tasks:
-   - name: Deploy AS3 to BIG-IP
-     uri:
+  - name: Deploy AS3 to BIG-IP
+    uri:
       url: https://51.142.10.142:8443/mgmt/shared/appsvcs/declare
       user: "{{ bigip_user }}"
       password: "{{ bigip_pass }}"
